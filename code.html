@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html class="light" lang="th">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>สุขภัณฑ์ไทย - อุปกรณ์ห้องน้ำดีไซน์ทันสมัย</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;family=Kanit:wght@400;500;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        scroll-behavior: smooth;
+      }
+    </style>
+
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#25aff4",
+              "background-light": "#f5f7f8",
+              "background-dark": "#101c22",
+              "surface-light": "#ffffff",
+              "surface-dark": "#1a2a33",
+              "text-light": "#0d171c",
+              "text-dark": "#e7eff4",
+              "text-muted-light": "#49819c",
+              "text-muted-dark": "#a0b8c4"
+            },
+            fontFamily: {
+              display: ["Kanit", "Inter", "sans-serif"]
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem",
+              lg: "0.75rem",
+              xl: "1rem",
+              full: "9999px"
+            }
+          }
+        }
+      };
+    </script>
+  </head>
+
+  <body
+    class="font-display bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark"
+  >
+    <div class="relative flex min-h-screen w-full flex-col">
+      <!-- TopNavBar -->
+      <header
+        class="sticky top-0 z-50 w-full bg-surface-light/80 dark:bg-surface-dark/80 backdrop-blur-sm border-b border-gray-200 dark:border-gray-700"
+        id="home"
+      >
+        <div class="container mx-auto px-4">
+          <div class="flex h-16 items-center justify-between whitespace-nowrap">
+            <div class="flex items-center gap-3 text-primary">
+              <span class="material-symbols-outlined text-3xl">shower</span>
+              <h2
+                class="text-xl font-bold leading-tight tracking-[-0.015em] text-text-light dark:text-text-dark"
+              >
+                สุขภัณฑ์ไทย
+              </h2>
+            </div>
+            <nav class="hidden md:flex items-center gap-8">
+              <a
+                class="text-sm font-medium hover:text-primary transition-colors"
+                href="#home"
+                >หน้าแรก</a
+              >
+              <a
+                class="text-sm font-medium hover:text-primary transition-colors"
+                href="#products"
+                >สินค้า</a
+              >
+              <a
+                class="text-sm font-medium hover:text-primary transition-colors"
+                href="#subscribe"
+                >บันทึกข้อมูล</a
+              >
+              <a
+                class="text-sm font-medium hover:text-primary transition-colors"
+                href="#order"
+                >สั่งซื้อ</a
+              >
+              <a
+                class="text-sm font-medium hover:text-primary transition-colors"
+                href="#contact"
+                >ติดต่อเรา</a
+              >
+            </nav>
+            <div class="flex items-center gap-2">
+              <button
+                class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors"
+              >
+                <span class="truncate">ดูสินค้า</span>
+              </button>
+              <button
+                class="flex cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-gray-200 dark:bg-gray-700 text-text-light dark:text-text-dark gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
+              >
+                <span class="material-symbols-outlined">shopping_cart</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="flex-grow">
+        <!-- HeroSection -->
+        <section class="container mx-auto px-4 py-10 md:py-20">
+          <div class="@container">
+            <div class="@[480px]:p-4">
+              <div
+                class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-lg items-center justify-center p-4"
+                data-alt="A modern, clean bathroom with high-end fixtures and natural light"
+                style='background-image: linear-gradient(rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuClNsiMQPZOxX4dI8LrLwrmdgKm6J7ZnTLS0F-GwU0iAPXvGZdR9P4HWzI0EII1306idcvTH-39cd76yjn4p4KsJaBTcdrle_2gVtw1egmo7j6wR6Mu_9cSxhY1xI8i711oIly97JeAQq3USWpS6DeebJXv9bLXdiWNpVq-Mgn85ZQsRwJkrCu9GGnZd1Yp3grix_qFNMzwHFMX3pYY1cWZqwg6F4CEslQ6wyq5sYKrtK_2HRkh0kVQSsBo9-qtSEeT7fuC8itPvBQi");'
+              >
+                <div class="flex flex-col gap-4 text-center">
+                  <h1
+                    class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]"
+                  >
+                    ยกระดับห้องน้ำของคุณ ด้วยสุขภัณฑ์ดีไซน์ทันสมัย
+                  </h1>
+                  <h2
+                    class="text-white text-base font-normal leading-normal @[480px]:text-lg @[480px]:font-normal @[480px]:leading-normal"
+                  >
+                    คัดสรรคุณภาพเพื่อความสุขในทุกๆ วัน
+                  </h2>
+                </div>
+                <a
+                  class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors"
+                  href="#products"
+                >
+                  <span class="truncate">ดูสินค้าทั้งหมด</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Product Grid Section -->
+        <section
+          class="container mx-auto px-4 py-10 md:py-16 bg-surface-light dark:bg-surface-dark rounded-lg"
+          id="products"
+        >
+          <h2
+            class="text-2xl font-bold leading-tight tracking-[-0.015em] px-4 pb-5 pt-2 text-center md:text-3xl"
+          >
+            สินค้าแนะนำ
+          </h2>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 p-4">
+            <div
+              class="flex flex-col gap-3 pb-3 border border-transparent hover:border-gray-200 dark:hover:border-gray-700 rounded-lg p-2 transition-all"
+            >
+              <div
+                class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg"
+                data-alt="Ceramic Washbasin"
+                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC8OOYWUPuQIqnd-u2clVRAzys1H_WmwVHuDgUMnV3u0NQAReoedbYv_wjtUNGTLTH_eS3zRsXuyvB9mdjlOKl6cgA3R-8RskEQWwPMrouEGvrDCjuWGM7d5XurrnnetAl5U4PF_xMLtlysNzVCrcE5rvPRkLHGtYDLLSKpc6-ITxNQqqUyO7tvpPWhKsuCv8DC3-o5KYCwtjfo4ofgzIVsnlE7E7_MxM_jJTrYwEGjkhhwYdPpJrp6ratheoqnSAI6sK9a7lufPBup");'
+              ></div>
+              <div>
+                <p class="text-base font-medium leading-normal">
+                  อ่างล้างหน้าเซรามิก
+                </p>
+                <p
+                  class="text-text-muted-light dark:text-text-muted-dark text-sm font-normal leading-normal"
+                >
+                  ฿2,500
+                </p>
+                <a
+                  class="text-primary text-sm font-medium leading-normal mt-1 inline-block hover:underline"
+                  href="#"
+                  >เพิ่มลงตะกร้า</a
+                >
+              </div>
+            </div>
+
+            <div
+              class="flex flex-col gap-3 pb-3 border border-transparent hover:border-gray-200 dark:hover:border-gray-700 rounded-lg p-2 transition-all"
+            >
+              <div
+                class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg"
+                data-alt="Water-saving Toilet"
+                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCArCOTPcFen9U3--zVcOukBnZY0oXXG_cGD2WMEXPQ8b2X7yjf4k79FmrkvfvNo5A17R4cSktmZGcamcWhE6756FEOO3WnGQcUy89IEGKo3YCyP3MT3YtDgNH3yShll9pWd64NSkd-u677I_-GV4jTKJLY2p0hY3-QX1_MOfVEuIj-5kvXui2IvfJ27_KtODwq693hDvKLvMefM5ixFiZrJlMqCIG2HrN4hEHCtavDcb132gV90DtYZRuv9TsPk4cljSAI6MizRxzO");'
+              ></div>
+              <div>
+                <p class="text-base font-medium leading-normal">
+                  โถสุขภัณฑ์ประหยัดน้ำ
+                </p>
+                <p
+                  class="text-text-muted-light dark:text-text-muted-dark text-sm font-normal leading-normal"
+                >
+                  ฿4,900
+                </p>
+                <a
+                  class="text-primary text-sm font-medium leading-normal mt-1 inline-block hover:underline"
+                  href="#"
+                  >เพิ่มลงตะกร้า</a
+                >
+              </div>
+            </div>
+
+            <div
+              class="flex flex-col gap-3 pb-3 border border-transparent hover:border-gray-200 dark:hover:border-gray-700 rounded-lg p-2 transition-all"
+            >
+              <div
+                class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg"
+                data-alt="Rain Shower Set"
+                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDRz_GPGAOiGPM4GiF-1Foai9S6AHGl83nFrxCLJFE2B1U42hWe92m_5kzG-Y0XJeZHq6JqLFA6UctpWi6J7eg-DWxHFNGYaGqe-f-KcLoNlA-Qsb1XvEY9nzg1xoHBlxXQHSYJC7gPrT64tyTW59w368QSVKaCdhevrOGbsIijactKNY7Pp6VIF6CemORAbP8xQ63O4NzGQUuOygacNNdsbW-c5LFUjFqeVXNFhCpHPFeBcHL7YdUmzMseRSR2KaLE5NJYwItXCoQZ");'
+              ></div>
+              <div>
+                <p class="text-base font-medium leading-normal">
+                  ชุดฝักบัวเรนชาวเวอร์
+                </p>
+                <p
+                  class="text-text-muted-light dark:text-text-muted-dark text-sm font-normal leading-normal"
+                >
+                  ฿3,800
+                </p>
+                <a
+                  class="text-primary text-sm font-medium leading-normal mt-1 inline-block hover:underline"
+                  href="#"
+                  >เพิ่มลงตะกร้า</a
+                >
+              </div>
+            </div>
+
+            <div
+              class="flex flex-col gap-3 pb-3 border border-transparent hover:border-gray-200 dark:hover:border-gray-700 rounded-lg p-2 transition-all"
+            >
+              <div
+                class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg"
+                data-alt="Modern Faucet"
+                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA-bVDStLm5zNlbATtT6-bRoaG1GL1neirZoHjXSXlaao1fiRDQPNeWMl0UvKWih3Nv3tyrB2MV2gwrGHPXypVeNCo2Uv5--fCKVvalc9hatBDybeMyBoLoXNGnLLFQFc5wXR6OW1Cu8GK8kKeA-MD7ixWiZgp0e79wS-qjVpgQXRF9XTc64qV9WIQNHsTfVVCmzE7v28KpD1S1Wg2EE1DQ9v_VZM9h-AxIiUXe8d0Co5o-uDY4jlC2ScBGnLcjpijzLGxNBZJOOyEN");'
+              ></div>
+              <div>
+                <p class="text-base font-medium leading-normal">
+                  ก๊อกน้ำดีไซน์โมเดิร์น
+                </p>
+                <p
+                  class="text-text-muted-light dark:text-text-muted-dark text-sm font-normal leading-normal"
+                >
+                  ฿1,200
+                </p>
+                <a
+                  class="text-primary text-sm font-medium leading-normal mt-1 inline-block hover:underline"
+                  href="#"
+                  >เพิ่มลงตะกร้า</a
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- CTA/Subscribe Section -->
+        <section class="container mx-auto px-4 py-10 md:py-20" id="subscribe">
+          <div class="@container">
+            <div
+              class="flex flex-col justify-end gap-6 px-4 py-10 @[480px]:gap-8 @[480px]:px-10 @[480px]:py-16 text-center"
+            >
+              <div class="flex flex-col gap-2 items-center">
+                <h2
+                  class="text-3xl font-bold leading-tight tracking-[-0.033em] @[480px]:text-4xl max-w-2xl"
+                >
+                  รับข่าวสารและโปรโมชั่นพิเศษ
+                </h2>
+                <p
+                  class="text-base font-normal leading-normal max-w-2xl text-text-muted-light dark:text-text-muted-dark"
+                >
+                  ลงทะเบียนเพื่อไม่พลาดทุกข้อเสนอดีๆ จากเรา
+                </p>
+              </div>
+              <div class="flex flex-1 justify-center">
+                <form class="flex w-full max-w-lg">
+                  <input
+                    class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-l-lg text-text-light dark:text-text-dark focus:outline-0 focus:ring-2 focus:ring-primary border-gray-300 dark:border-gray-600 bg-surface-light dark:bg-surface-dark h-12 placeholder:text-text-muted-light dark:placeholder:text-text-muted-dark px-4 text-base font-normal leading-normal"
+                    placeholder="กรอกอีเมลของคุณ"
+                    type="email"
+                  />
+                  <button
+                    class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-r-lg h-12 px-5 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors"
+                    type="submit"
+                  >
+                    <span class="truncate">ลงทะเบียน</span>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Order Form Section (แก้แล้ว, ใส่ id ครบ) -->
+        <section
+          class="container mx-auto px-4 py-10 md:py-16 bg-surface-light dark:bg-surface-dark rounded-lg"
+          id="order"
+        >
+          <h2
+            class="text-2xl font-bold leading-tight tracking-[-0.015em] px-4 pb-5 pt-2 text-center md:text-3xl"
+          >
+            ขั้นตอนการสั่งซื้อ
+          </h2>
+
+          <div class="max-w-2xl mx-auto p-4 md:p-8">
+            <form id="orderForm" class="space-y-6">
+              <!-- ข้อมูลการจัดส่ง -->
+              <div>
+                <h3 class="text-lg font-semibold mb-4">ข้อมูลการจัดส่ง</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <input
+                    id="firstName"
+                    class="form-input w-full rounded-lg border-gray-300 dark:border-gray-600 bg-background-light dark:bg-background-dark focus:ring-primary focus:border-primary"
+                    placeholder="ชื่อ"
+                    type="text"
+                    required
+                  />
+                  <input
+                    id="lastName"
+                    class="form-input w-full rounded-lg border-gray-300 dark:border-gray-600 bg-background-light dark:bg-background-dark focus:ring-primary focus:border-primary"
+                    placeholder="นามสกุล"
+                    type="text"
+                    required
+                  />
+                </div>
+
+                <textarea
+                  id="address"
+                  class="form-textarea mt-4 w-full rounded-lg border-gray-300 dark:border-gray-600 bg-background-light dark:bg-background-dark focus:ring-primary focus:border-primary"
+                  placeholder="ที่อยู่"
+                  rows="3"
+                  required
+                ></textarea>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                  <input
+                    id="email"
+                    class="form-input w-full rounded-lg border-gray-300 dark:border-gray-600 bg-background-light dark:bg-background-dark focus:ring-primary focus:border-primary"
+                    placeholder="อีเมล"
+                    type="email"
+                    required
+                  />
+                  <input
+                    id="phone"
+                    class="form-input w-full rounded-lg border-gray-300 dark:border-gray-600 bg-background-light dark:bg-background-dark focus:ring-primary focus:border-primary"
+                    placeholder="เบอร์โทรศัพท์"
+                    type="tel"
+                    required
+                  />
+                </div>
+              </div>
+
+              <!-- เลือกสินค้า -->
+              <div>
+                <h3 class="text-lg font-semibold mb-4">เลือกสินค้า</h3>
+                <select
+                  id="productSelect"
+                  class="form-select w-full rounded-lg border-gray-300 dark:border-gray-600 bg-background-light dark:bg-background-dark focus:ring-primary focus:border-primary"
+                  required
+                >
+                  <option value="">เลือกสินค้าที่ต้องการ...</option>
+                  <option value="อ่างล้างหน้าเซรามิก - 2500">
+                    อ่างล้างหน้าเซรามิก - ฿2,500
+                  </option>
+                  <option value="โถสุขภัณฑ์ประหยัดน้ำ - 4900">
+                    โถสุขภัณฑ์ประหยัดน้ำ - ฿4,900
+                  </option>
+                  <option value="ชุดฝักบัวเรนชาวเวอร์ - 3800">
+                    ชุดฝักบัวเรนชาวเวอร์ - ฿3,800
+                  </option>
+                  <option value="ก๊อกน้ำดีไซน์โมเดิร์น - 1200">
+                    ก๊อกน้ำดีไซน์โมเดิร์น - ฿1,200
+                  </option>
+                </select>
+              </div>
+
+              <!-- วิธีการชำระเงิน -->
+              <div>
+                <h3 class="text-lg font-semibold mb-4">วิธีการชำระเงิน</h3>
+                <div class="space-y-2">
+                  <label
+                    class="flex items-center gap-3 p-3 rounded-lg border border-gray-300 dark:border-gray-600 cursor-pointer"
+                  >
+                    <input
+                      class="form-radio text-primary focus:ring-primary"
+                      name="payment"
+                      type="radio"
+                      value="โอนผ่านธนาคาร"
+                      required
+                    />
+                    <span>โอนผ่านธนาคาร</span>
+                  </label>
+                  <label
+                    class="flex items-center gap-3 p-3 rounded-lg border border-gray-300 dark:border-gray-600 cursor-pointer"
+                  >
+                    <input
+                      class="form-radio text-primary focus:ring-primary"
+                      name="payment"
+                      type="radio"
+                      value="บัตรเครดิต/เดบิต"
+                    />
+                    <span>บัตรเครดิต/เดบิต</span>
+                  </label>
+                  <label
+                    class="flex items-center gap-3 p-3 rounded-lg border border-gray-300 dark:border-gray-600 cursor-pointer"
+                  >
+                    <input
+                      class="form-radio text-primary focus:ring-primary"
+                      name="payment"
+                      type="radio"
+                      value="เก็บเงินปลายทาง"
+                    />
+                    <span>เก็บเงินปลายทาง</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- ปุ่ม + ข้อความสถานะ -->
+              <button
+                class="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-base font-medium text-white bg-primary hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-colors"
+                type="submit"
+              >
+                ยืนยันการสั่งซื้อ
+              </button>
+
+              <p id="statusText" class="text-sm mt-2"></p>
+            </form>
+          </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="container mx-auto px-4 py-10 md:py-20" id="contact">
+          <h2
+            class="text-2xl font-bold leading-tight tracking-[-0.015em] px-4 pb-8 pt-2 text-center md:text-3xl"
+          >
+            ติดต่อเรา
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            <div class="flex flex-col items-center gap-3">
+              <span class="material-symbols-outlined text-4xl text-primary"
+                >location_on</span
+              >
+              <h3 class="text-lg font-semibold">ที่อยู่</h3>
+              <p
+                class="text-text-muted-light dark:text-text-muted-dark"
+              >
+                123 ถนนสุขุมวิท, เขตวัฒนา, กรุงเทพมหานคร 10110
+              </p>
+            </div>
+            <div class="flex flex-col items-center gap-3">
+              <span class="material-symbols-outlined text-4xl text-primary"
+                >call</span
+              >
+              <h3 class="text-lg font-semibold">โทรศัพท์</h3>
+              <a
+                class="text-text-muted-light dark:text-text-muted-dark hover:text-primary transition-colors"
+                href="tel:021234567"
+                >02-123-4567</a
+              >
+            </div>
+            <div class="flex flex-col items-center gap-3">
+              <span class="material-symbols-outlined text-4xl text-primary"
+                >email</span
+              >
+              <h3 class="text-lg font-semibold">อีเมล</h3>
+              <a
+                class="text-text-muted-light dark:text-text-muted-dark hover:text-primary transition-colors"
+                href="mailto:contact@sukapanthai.com"
+                >contact@sukapanthai.com</a
+              >
+            </div>
+          </div>
+          <div class="mt-12 w-full h-64 md:h-80 rounded-lg overflow-hidden">
+            <iframe
+              allowfullscreen=""
+              data-location="Bangkok, Thailand"
+              height="100%"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.918237956275!2d100.5794172152019!3d13.723188101484084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29f0485c29013%3A0x2a3e63b4380b2014!2sBangkok%2C%20Thailand!5e0!3m2!1sen!2sus!4v1678886400000!5m2!1sen!2sus"
+              style="border:0;"
+              width="100%"
+            ></iframe>
+          </div>
+        </section>
+      </main>
+
+      <!-- Footer -->
+      <footer
+        class="w-full bg-surface-light dark:bg-surface-dark border-t border-gray-200 dark:border-gray-700"
+      >
+        <div class="container mx-auto px-4 py-8">
+          <div
+            class="flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-4"
+          >
+            <div class="flex items-center gap-3 text-primary">
+              <span class="material-symbols-outlined text-2xl">shower</span>
+              <h2
+                class="text-lg font-bold text-text-light dark:text-text-dark"
+              >
+                สุขภัณฑ์ไทย
+              </h2>
+            </div>
+            <p
+              class="text-sm text-text-muted-light dark:text-text-muted-dark"
+            >
+              © 2024 สุขภัณฑ์ไทย. สงวนลิขสิทธิ์.
+            </p>
+            <div class="flex gap-4">
+              <a
+                class="text-text-muted-light dark:text-text-muted-dark hover:text-primary transition-colors"
+                href="#"
+                >Facebook</a
+              >
+              <a
+                class="text-text-muted-light dark:text-text-muted-dark hover:text-primary transition-colors"
+                href="#"
+                >Line</a
+              >
+              <a
+                class="text-text-muted-light dark:text-text-muted-dark hover:text-primary transition-colors"
+                href="#"
+                >Instagram</a
+              >
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Firebase + บันทึกคำสั่งซื้อ -->
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/12.5.0/firebase-app.js";
+      import {
+        getFirestore,
+        collection,
+        addDoc,
+        serverTimestamp
+      } from "https://www.gstatic.com/firebasejs/12.5.0/firebase-firestore.js";
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyB5YpxDVhE4XS00LnwasFvRCXfAEvQ4DUc",
+        authDomain: "bathroom-5216a.firebaseapp.com",
+        projectId: "bathroom-5216a",
+        storageBucket: "bathroom-5216a.firebasestorage.app",
+        messagingSenderId: "986629427497",
+        appId: "1:986629427497:web:168a4652973660a39fa738",
+        measurementId: "G-BCNN0JFDNZ"
+      };
+
+      const app = initializeApp(firebaseConfig);
+      const db = getFirestore(app);
+
+      const orderForm = document.getElementById("orderForm");
+      const statusText = document.getElementById("statusText");
+
+      orderForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const orderData = {
+          firstName: document.getElementById("firstName").value.trim(),
+          lastName: document.getElementById("lastName").value.trim(),
+          address: document.getElementById("address").value.trim(),
+          email: document.getElementById("email").value.trim(),
+          phone: document.getElementById("phone").value.trim(),
+          product: document.getElementById("productSelect").value,
+          payment:
+            document.querySelector('input[name="payment"]:checked')?.value ||
+            "",
+          createdAt: serverTimestamp()
+        };
+
+        try {
+          await addDoc(collection(db, "orders"), orderData);
+          statusText.textContent = "บันทึกคำสั่งซื้อเรียบร้อยแล้ว 🎉";
+          statusText.className = "text-sm mt-2 text-green-600";
+          orderForm.reset();
+        } catch (error) {
+          console.error(error);
+          statusText.textContent = "เกิดข้อผิดพลาดในการบันทึกข้อมูล";
+          statusText.className = "text-sm mt-2 text-red-500";
+        }
+      });
+    </script>
+  </body>
+</html>
