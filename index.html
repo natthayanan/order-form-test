@@ -539,7 +539,7 @@
       </footer>
     </div>
 
-    <!-- Firebase + บันทึกคำสั่งซื้อ -->
+    <    <!-- Firebase + บันทึกคำสั่งซื้อ + popup -->
     <script type="module">
       import { initializeApp } from "https://www.gstatic.com/firebasejs/12.5.0/firebase-app.js";
       import {
@@ -562,36 +562,79 @@
       const app = initializeApp(firebaseConfig);
       const db = getFirestore(app);
 
+      // ---------- 1) ฟอร์มรับข่าวสาร (ปุ่ม "ลงทะเบียน") ----------
+      const subscribeSection = document.getElementById("subscribe");
+      const subscribeForm = subscribeSection
+        ? subscribeSection.querySelector("form")
+        : null;
+
+      if (subscribeForm) {
+        subscribeForm.addEventListener("submit", async (e) => {
+          e.preventDefault();
+
+          const emailInput = subscribeForm.querySelector('input[type="email"]');
+          const email = emailInput ? emailInput.value.trim() : "";
+
+          if (!email) {
+            alert("กรุณากรอกอีเมลก่อนกดลงทะเบียน");
+            return;
+          }
+
+          try {
+            // บันทึกอีเมลลง Firestore (collection: subscribers)
+            await addDoc(collection(db, "subscribers"), {
+              email,
+              createdAt: serverTimestamp()
+            });
+
+            alert("ส่งข่าวสารผ่านทางอีเมลล์เรียบร้อย");
+            if (emailInput) emailInput.value = "";
+          } catch (error) {
+            console.error(error);
+            alert("เกิดข้อผิดพลาดในการบันทึกอีเมล");
+          }
+        });
+      }
+
+      // ---------- 2) ฟอร์มสั่งซื้อ ----------
       const orderForm = document.getElementById("orderForm");
       const statusText = document.getElementById("statusText");
 
-      orderForm.addEventListener("submit", async (e) => {
-        e.preventDefault();
+      if (orderForm) {
+        orderForm.addEventListener("submit", async (e) => {
+          e.preventDefault();
 
-        const orderData = {
-          firstName: document.getElementById("firstName").value.trim(),
-          lastName: document.getElementById("lastName").value.trim(),
-          address: document.getElementById("address").value.trim(),
-          email: document.getElementById("email").value.trim(),
-          phone: document.getElementById("phone").value.trim(),
-          product: document.getElementById("productSelect").value,
-          payment:
-            document.querySelector('input[name="payment"]:checked')?.value ||
-            "",
-          createdAt: serverTimestamp()
-        };
+          const orderData = {
+            firstName: document.getElementById("firstName").value.trim(),
+            lastName: document.getElementById("lastName").value.trim(),
+            address: document.getElementById("address").value.trim(),
+            email: document.getElementById("email").value.trim(),
+            phone: document.getElementById("phone").value.trim(),
+            product: document.getElementById("productSelect").value,
+            payment:
+              (document.querySelector('input[name="payment"]:checked') || {})
+                .value || "",
+            createdAt: serverTimestamp()
+          };
 
-        try {
-          await addDoc(collection(db, "orders"), orderData);
-          statusText.textContent = "บันทึกคำสั่งซื้อเรียบร้อยแล้ว 🎉";
-          statusText.className = "text-sm mt-2 text-green-600";
-          orderForm.reset();
-        } catch (error) {
-          console.error(error);
-          statusText.textContent = "เกิดข้อผิดพลาดในการบันทึกข้อมูล";
-          statusText.className = "text-sm mt-2 text-red-500";
-        }
-      });
+          try {
+            await addDoc(collection(db, "orders"), orderData);
+
+            statusText.textContent = "บันทึกคำสั่งซื้อเรียบร้อยแล้ว 🎉";
+            statusText.className = "text-sm mt-2 text-green-600";
+
+            // popup ยืนยันการสั่งซื้อ
+            alert("ยืนยันการสั่งซื้อของคุณเรียบร้อย");
+
+            orderForm.reset();
+          } catch (error) {
+            console.error(error);
+            statusText.textContent = "เกิดข้อผิดพลาดในการบันทึกข้อมูล";
+            statusText.className = "text-sm mt-2 text-red-500";
+          }
+        });
+      }
     </script>
   </body>
 </html>
+
